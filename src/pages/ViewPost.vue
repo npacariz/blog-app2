@@ -61,17 +61,13 @@ export default {
     }
   },
 
-  created(){
-  
-    
-    this.$store.dispatch("getAllPosts");
-     this.id = this.$route.params.id
-
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      vm.$store.dispatch("getAllPosts");
+    });
      
+  
   }
-     
-  
-
   
   
 };

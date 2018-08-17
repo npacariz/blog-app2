@@ -8,25 +8,25 @@
           </div>
           <div class="form-group">
             <label for="pwd">Body</label>
-            <textarea type="text" class="form-control" v-model="newPost.text" required maxlength="300"></textarea>
-           
+            <tinymce id="d1"  type="text" class="form-control" v-model="newPost.text" required maxlength="300"></tinymce>
+            <Editor />
+<div class="g-recaptcha" data-sitekey="6Le2gGoUAAAAAPgbeBygFBfEwf9q97YZ9Jn0qBRw"></div>
 
           </div>
         
         <button type="submit" class='btn btn-success'>{{title}}</button>
         <button type="reset" @click="reset" class='btn btn-warning'>Reset</button>
-        <div class="g-recaptcha" data-sitekey="6Le2gGoUAAAAAPgbeBygFBfEwf9q97YZ9Jn0qBRw"></div>
-
+        
 
          </form>
     </div>
 </template>
 
 <script>
-import VueRecaptcha from 'vue-recaptcha';
+
 export default {
   name: "InputForm",
-  components: { VueRecaptcha },
+
   props: {
     newPost: Object,
     title: String

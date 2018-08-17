@@ -12,7 +12,10 @@
 </template>
 
 <script>
+
+
 export default {
+  
   name: "InputForm",
   props: {
     newComment: Object
@@ -20,10 +23,8 @@ export default {
   methods: {
     submit() {
       
-            this.$emit("submit");
-        
+      this.$emit("submit");
 
-      
     }
   }
 };

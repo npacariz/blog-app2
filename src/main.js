@@ -2,7 +2,9 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./routes";
 import store from "./store/index.js";
+import tinymce from 'vue-tinymce-editor'
 
+Vue.component('tinymce', tinymce)
 
 
 Vue.config.productionTip = false;
